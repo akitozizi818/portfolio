@@ -472,17 +472,22 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 90vw;
-            max-height: 90vh;
+            max-width: 95vw;
+            max-height: 95vh;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 25px 50px rgba(0, 240, 181, 0.3);
             border: 2px solid var(--accent-emerald);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .modal-content img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
             object-fit: contain;
             background: var(--primary-bg);
         }
@@ -976,7 +981,7 @@
                     <div class="swiper-slide">
                         <h3 class="project-title">Marketing Copilot</h3>
                         <div class="award">2025年/デジタルガレージのインターシップ（ハッカソン） 優勝</div>
-                        <div class="project-image" onclick="openModal('img/marketing_copilot.png', 'Marketing Copilot アプリスクリーンショット')"><img src="img/marketing_copilot.png" alt="Marketing Copilot アプリスクリーンショット"></div>
+                        <div class="project-image" onclick="openModal('img/marketing_copilot.jpeg', 'Marketing Copilot アプリスクリーンショット')"><img src="img/marketing_copilot.jpeg" alt="Marketing Copilot アプリスクリーンショット"></div>
                         <p><strong>概要：</strong>決済データをもとにマーケティングを支援するWebアプリケーションです。</p>
                         <p><strong>使用技術：</strong>TypeScript, React, node.js, Hono</p>
                         <p><strong>こだわりや工夫した点：</strong>AIによるマークダウン形式での決済データの解説</p>
@@ -989,7 +994,7 @@
                     <div class="swiper-slide">
                         <h3 class="project-title">シフト管理AI〜シフ長〜</h3>
                         <div class="award">第2回 AI Agent Hackathon with Google Cloud　1次審査通過</div>
-                        <div class="project-image" onclick="openModal('img/shift_management_ai.png', 'シフ長 アプリスクリーンショット')"><img src="img/shift_management_ai.png" alt="シフ長 アプリスクリーンショット"></div>
+                        <div class="project-image" onclick="openModal('img/shift_management_ai.jpeg', 'シフ長 アプリスクリーンショット')"><img src="img/shift_management_ai.jpeg" alt="シフ長 アプリスクリーンショット"></div>
                         <p><strong>概要：</strong>シフトの作成からアルバイトへのシフト依頼のやりとりまでをまとめて行うAIエージェントWebアプリです。</p>
                         <p><strong>使用技術：</strong>TypeScript, Next.js 14, Firebase, Vertex AI, LINE Messaging API, Google Cloud Run</p>
                         <p><strong>こだわりや工夫した点：</strong>AIによる日程調整機能</p>
