@@ -115,13 +115,13 @@
 
         .hero-content {
             z-index: 1;
-            max-width: 800px;
+            max-width: 900px;
             padding: 0 20px;
         }
 
         .hero-title {
             font-family: 'Orbitron', monospace;
-            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-size: clamp(1.8rem, 6vw, 4rem);
             font-weight: 900;
             margin-bottom: 2rem;
             background: linear-gradient(45deg, var(--accent-emerald), var(--accent-fuchsia), var(--accent-cyan));
@@ -129,6 +129,11 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: titleFadeIn 2s ease-out 0.5s both;
+            line-height: 1.2;
+        }
+
+        .hero-title .break-mobile {
+            display: none;
         }
 
         @keyframes titleFadeIn {
@@ -798,9 +803,25 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 2.5rem;
+                font-size: clamp(1.5rem, 8vw, 2.5rem);
             }
 
+            .hero-title .break-mobile {
+                display: inline;
+            }
+
+            .hero-title .break-desktop {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: clamp(1.2rem, 10vw, 2rem);
+            }
+        }
+        
+        @media (max-width: 768px) {
             .about-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -863,7 +884,7 @@
         <div class="hero-bg"></div>
         <div class="particles" id="particles"></div>
         <div class="hero-content">
-            <h1 class="hero-title">技術の力で、心揺さぶる「体験」を創り出す。</h1>
+            <h1 class="hero-title">技術の力で、<br class="break-desktop"><br class="break-mobile">心揺さぶる「体験」を<br class="break-desktop"><br class="break-mobile">創り出す。</h1>
         </div>
         <div class="scroll-indicator" onclick="scrollToSection('about')">
             Scroll Down
@@ -901,8 +922,8 @@
         <div class="container">
             <h2 class="section-title fade-in">Vision</h2>
             <div class="vision-intro fade-in">
-                <h2>技術の力で、心揺さぶる「体験」を創り出す。</h2>
-                <p>私が創りたいのは、心が揺さぶられる「体験」です。便利なだけ、機能的なだけではなく、ユーザーが驚き、心を動かすような体験となるプロダクトを実現します。<br>そのために以下の3つの指針を大事にしています。</p>
+                <h2>技術の力で、<br class="break-desktop"><br class="break-mobile">心揺さぶる「体験」を<br class="break-desktop"><br class="break-mobile">創り出す。</h2>
+                <p>私が創りたいのは、心が揺さぶられる「体験」です。<br>便利なだけ、機能的なだけではなく、ユーザーが驚き、心を動かすような体験となるプロダクトを実現します。<br>そのために以下の3つの指針を大事にしています。</p>
             </div>
             <div class="vision-cards">
                 <div class="vision-card fade-in">
