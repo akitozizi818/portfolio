@@ -42,11 +42,8 @@ function initSwiper() {
                 slidesPerView: 3,
             }
         },
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        }
+        loop: false,
+        autoplay: false
     });
 }
 
