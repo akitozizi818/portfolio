@@ -1,21 +1,4 @@
-// Particle System
-function createParticles() {
-    const particlesContainer = document.getElementById('particles');
-    const colors = ['#00F0B5', '#FF00FF', '#00FFFF'];
-    
-    for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.width = Math.random() * 4 + 2 + 'px';
-        particle.style.height = particle.style.width;
-        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-        particle.style.animationDelay = Math.random() * 6 + 's';
-        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-        particlesContainer.appendChild(particle);
-    }
-}
+// Particle System (removed - no longer needed)
 
 // Smooth scrolling
 function scrollToSection(sectionId) {
@@ -67,24 +50,7 @@ function initSwiper() {
     });
 }
 
-// Typewriter effect for hero title
-function typewriterEffect() {
-    const title = document.querySelector('.hero-title');
-    const text = title.textContent;
-    title.textContent = '';
-    title.style.opacity = '1';
-    
-    let i = 0;
-    function type() {
-        if (i < text.length) {
-            title.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, 100);
-        }
-    }
-    
-    setTimeout(type, 1000);
-}
+// Typewriter effect (removed - no longer needed)
 
 // Copy to clipboard function
 function copyToClipboard(text, button) {
@@ -141,31 +107,25 @@ document.addEventListener('keydown', function(event) {
 
 // Initialize everything
 document.addEventListener('DOMContentLoaded', function() {
-    createParticles();
     initSwiper();
-    
+
     // Scroll event listener
     window.addEventListener('scroll', handleScrollAnimations);
-    
+
     // Initial check for animations
     setTimeout(handleScrollAnimations, 100);
-    
-    // Add scroll indicator click functionality
-    document.querySelector('.scroll-indicator').addEventListener('click', function() {
-        scrollToSection('about');
-    });
 });
 
 // Add floating animation to cards
 function addFloatingAnimation() {
-    const cards = document.querySelectorAll('.vision-card, .interest-card, .experience-card');
-    
+    const cards = document.querySelectorAll('.interest-card, .experience-card');
+
     cards.forEach((card, index) => {
         card.style.animationDelay = index * 0.2 + 's';
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px) scale(1.02) rotate(' + (Math.random() * 4 - 2) + 'deg)';
         });
-        
+
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
         });
