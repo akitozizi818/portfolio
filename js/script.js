@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Add floating animation to cards
 function addFloatingAnimation() {
-    const cards = document.querySelectorAll('.interest-card, .experience-card');
+    const cards = document.querySelectorAll('.interest-card');
 
     cards.forEach((card, index) => {
         card.style.animationDelay = index * 0.2 + 's';

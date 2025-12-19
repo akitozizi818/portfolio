@@ -594,28 +594,61 @@ body {
 }
 
 /* Experience Section */
-.experience-card {
-    background: var(--card-bg);
-    border-radius: 20px;
-    padding: 40px;
-    border: 1px solid var(--border-color);
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0 2px 8px var(--shadow-color);
+.experience-subsection {
+    margin-bottom: 40px;
 }
 
-.company-name {
-    font-size: 1.8rem;
+.experience-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.subsection-title {
+    font-size: 1.4rem;
     color: var(--accent-primary);
     margin-bottom: 20px;
     font-weight: 700;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experience-card {
+    background: var(--secondary-bg);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    padding: 15px 0;
+}
+
+.experience-item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0;
+}
+
+.company-name {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    font-weight: 600;
 }
 
 .role {
     color: var(--accent-secondary);
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    margin-bottom: 0;
     font-weight: 600;
+}
+
+.period {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    font-weight: 400;
 }
 
 /* Interests Section */
