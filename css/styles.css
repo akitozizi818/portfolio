@@ -306,6 +306,10 @@ body {
     align-items: start;
 }
 
+.research-content + .research-content {
+    margin-top: 60px;
+}
+
 .research-image {
     width: 100%;
     height: 100%;
